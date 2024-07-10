@@ -1,0 +1,45 @@
+@use 'variaveis';
+
+.shows {
+    padding: 2vw 5.6vw;
+    min-height: 50vw;
+
+    &__list {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        margin-top: 44px;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            background: none;
+            border: none;
+            border-bottom: 5px solid transparent;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            transition: border-color 0.5s ease; // Adiciona uma transição suave para a cor da borda
+            &--is-active {
+            border-color: variaveis.$corTextoSecundario;
+            }
+        }
+    }
+}
